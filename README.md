@@ -36,3 +36,8 @@ npm start
 
 - /api/users
 
+> express 热更新
+
+- `npm i nodemon -g`
+- server/nodemon.json 配置
+
