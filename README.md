@@ -21,3 +21,18 @@ npm start
 
 > UI 引用 [bootstrap cdn](https://www.bootcdn.cn/twitter-bootstrap/ )
 
+### 2、后端环境搭建
+
+> 创建 server
+
+- 创建 index.js
+
+- `npm init` `npm i express --save`
+
+- server/index.js > 用 express 搭建服务器 端口2020
+- `node index.js` 
+
+> 创建路由 routes
+
+- /api/users
+
