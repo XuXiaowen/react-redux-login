@@ -20,7 +20,9 @@ ReactDOM.render(
     <Provider store={ store }>
         <Router routes={ routes }>
             <Menu/>
-            { routes }
+            <div style={{marginTop: '20px'}}>
+                { routes }
+            </div>
         </Router>
     </Provider>
     ,

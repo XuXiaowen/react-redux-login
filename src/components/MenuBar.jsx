@@ -1,26 +1,24 @@
 import React, { Component } from 'react'
 import { Menu } from 'antd'
-import { Link } from 'react-router-dom'
+import { Link, withRouter } from 'react-router-dom'
 
 class MenuBar extends Component {
-    state = {
-        current: 'login'
-    }
 
-    handleClick = (e) => {
-        this.setState({
-            current: e.key
-        })
-    }
-    
     render() {
+        const { pathname } = this.props.history.location;
+
         return (
             <div>
-                <Menu onClick={this.handleClick} selectedKeys={[this.state.current]} mode="horizontal">
-                    <Menu.Item key="login">
+                <Menu 
+                    style={{textAlign: 'center'}} 
+                    selectedKeys={[pathname]} 
+                    mode="horizontal"
+                >
+                    <Menu.Item key="/">
                         <Link to="/">登录</Link>
                     </Menu.Item>
-                    <Menu.Item key="register">
+                    
+                    <Menu.Item key="/signup">
                         <Link to="/signup">注册</Link>
                     </Menu.Item>
                 </Menu>
@@ -29,4 +27,4 @@ class MenuBar extends Component {
     }
 }
 
-export default MenuBar
+export default withRouter(MenuBar)
