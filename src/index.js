@@ -1,6 +1,5 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import App from './components/App';
 
 import logger from 'redux-logger'
 import thunk from 'redux-thunk'
