@@ -19,7 +19,10 @@ const tailLayout = {
 
 
 class SignupForm extends Component {
-    
+    onFinish = (e) => {
+        console.log(e)
+    }
+
     render() {
         return (
             <Form
@@ -28,6 +31,7 @@ class SignupForm extends Component {
                 initialValues={{
                     remember: true,
                 }}
+                onFinish={this.onFinish}
             >
                 <Form.Item
                     label="Username"

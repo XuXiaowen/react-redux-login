@@ -87,3 +87,5 @@ vs code: File -> Preferences -> User Snippets
 - yarn add babel-plugin-import -dev
 - package.json plugins 配置
 
+### 4、实现注册页面
+
