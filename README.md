@@ -16,7 +16,7 @@ npm start
 
 - 创建 reducers
   - combineReducers 合并 reducers
-- UI 引用 [bootstrap cdn](https://www.bootcdn.cn/twitter-bootstrap/ )
+- UI 框架使用：Ant Design
 
 --------------
 
@@ -86,4 +86,4 @@ npm start
 
 - 创建 actions
   - signupActions
-- setProxy.js 解决跨域
+- setupProxy.js 解决跨域
