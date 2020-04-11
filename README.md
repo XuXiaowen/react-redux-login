@@ -86,4 +86,8 @@ npm start
 
 - 创建 actions
   - signupActions
-- setupProxy.js 解决跨域
+  - setupProxy.js 解决跨域     
+
+### 6、后端验证数据
+
+`yarn add lodash validator `
