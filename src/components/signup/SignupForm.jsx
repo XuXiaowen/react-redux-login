@@ -19,8 +19,9 @@ const tailLayout = {
 
 
 class SignupForm extends Component {
+    
     onFinish = (e) => {
-        console.log(e)
+        this.props.signupActions.userSignupRequest(e)
     }
 
     render() {
