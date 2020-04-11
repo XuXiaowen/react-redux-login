@@ -19,12 +19,27 @@ const tailLayout = {
 
 
 class SignupForm extends Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            isLodaing: false
+        }
+    }
     
     onFinish = (e) => {
-        this.props.signupActions.userSignupRequest(e)
+        this.setState({
+            isLodaing: true
+        })
+        this.props.signupActions.userSignupRequest(e).then(() => {
+            this.setState ({
+                isLodaing: false
+            })
+        })
     }
 
     render() {
+        const { isLodaing } = this.state;
+
         return (
             <Form
                 {...layout}
@@ -101,7 +116,7 @@ class SignupForm extends Component {
                 </Form.Item>
                 
                 <Form.Item {...tailLayout}>
-                    <Button type="primary" htmlType="submit">
+                    <Button disabled={isLodaing} type="primary" htmlType="submit">
                         注册
                     </Button>
                 </Form.Item>
